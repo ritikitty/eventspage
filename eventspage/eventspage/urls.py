@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url
 from boards import views
+from events import pages
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^events/', pages.home, name='events'),
     url(r'^admin/', admin.site.urls),
 ]
