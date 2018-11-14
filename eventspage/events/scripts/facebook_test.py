@@ -1,7 +1,10 @@
 import requests
 import json
+from dateutil import parser
 
-token = 'EAAd3GIyrbFEBACZC8I3bQm4jB4OFbm3nPOdgXdBh9Yz4jpZBoHVjKNs1WBW1u8KZBPRCHdr8UvxpkHYrWZAwAyVBmswCzAL3BVqaZBTDbcSBqypP3xy2GYfSBAZCf8hpUEcCKannCLORzgNuhgmzr8yovjOpOe4Mhne60vZBN4724a4JFYiiyZAufYIQ7LZC0bmApiZCWp9daY3sb7xZBDYjl5N'
+from events.models import Event
+
+token = 'EAAd3GIyrbFEBAB4P17FfWPB98WVMUgsLZANCGiutRZAubj8UyFUAB63fKNQT9l4sNpCmmDVEsZCYcAoyhguoNeBXq7xab2GDSZBBjQqsehScbSOju7PKTe7XeIncHvXXH7SwZBgG86w5ZAxuXLAZC30T0KAkkI816uiR24nRjJzBjUP6GxKkUVT4dFXChLcfurMDPQnuxjrkRuGGCgQmFBP9TFLj4DJeUYZD'
 
 events = 'https://graph.facebook.com/v3.2/me?fields=events&access_token=' + token
 
@@ -10,17 +13,15 @@ outputEventResponse = requests.get(events)
 outputEventBook = json.loads(outputEventResponse.text)
 
 print(outputEventBook['events']['data'][0]['name'])
+print(parser.parse(outputEventBook['events']['data'][0]['end_time']))
 
 for i in range(15):
     eventName = outputEventBook['events']['data'][i]['name']
-    event = Event.objects.create(name=eventName, description='test')
+    endTime = parser.parse(outputEventBook['events']['data'][i]['end_time'])
+
+    event = Event.objects.create(name=eventName, description='test', end_time = endTime)
 
 
-
-# from events.models import Board
-# event = Board.objects.create(name='Python', description='General discussion about Python.')
-#
-#
 
 
 
