@@ -12,7 +12,7 @@ class Event(models.Model):
     place_location_latitude = models.FloatField(null=True, max_length=25)
     place_location_longitude = models.FloatField(null=True, max_length=25)
     place_location_street = models.CharField(null=True, max_length = 30)
-    place_location_zip = models.IntegerField(null=True)
+    place_location_zip = models.CharField(null=True, max_length=30)
     place_id = models.IntegerField(null=True)
     start_time = models.DateTimeField(null=True)
     id_fb = models.IntegerField(null=True)
