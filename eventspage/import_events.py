@@ -136,14 +136,13 @@ while run:
                 link = outputEventBook['events']['paging']['next']
                 outputEventBook = getData(link)
                 getExistingObjects()
-                nrEvents = len(outputEventBook['events']['data'])
+                nrEvents = len(outputEventBook['data'])
                 print('-------------',nrEvents)
                 i=0
             else:
                 run = False
                 print('no more page')
                 break
-        print('nr of processed events:  ',processed)
     
     
     
