@@ -4,7 +4,7 @@ from dateutil import parser
 from django.utils.dateparse import parse_date
 from events.models import Event
 
-token = 'EAAd3GIyrbFEBAIZBSJnZCF7aUUKVsT7bgPf865v6vSqatUZB02fae4OmuIbESIBnDEubMHaEOyIuZCVPXgZCcZCTv7rK08L9i15fZBjE8LChoayu6alZAZAHlNZAEDrbmkFtpHiZBkSZCuqvmGeHIdOJnm0cvBAeORU8YfnUevrNP3Xh3DwPnrhVjicld48K0StdO5FsZCa5jTIaceNErVs693r0y'
+token = 'EAAd3GIyrbFEBAHBziaSFmltTf633ApSM311Jh2DhL9NZAj7aXZA4YDZA2ZAqFC0csYjeZC48k9mFRIQt0mvEgdlByNQD9WFZAmPhId9ClAEfqcWkLOdrBre1S9fItayGNN132B4bAPHdHKCZAcMNT7Qq61R0b2mXv4ECNXzIZCkUhRZABRKjEZAEIXdCTKrzZBhgWtSbadb6ZBkZCI3Ry9KozOi7z'
 link = 'https://graph.facebook.com/v3.2/100565557630187/events?pretty=0&limit=2000&access_token=' + token
 processed = 0
 
