@@ -4,7 +4,7 @@ from dateutil import parser
 from django.utils.dateparse import parse_date
 from events.models import Event
 
-token = 'EAAd3GIyrbFEBAJP4kEZBBg87KoZCrlwTgUcz445ozVZC6Hn7WZCfcpXPlSnbyjCvLidYvxNhTZAD0YkuHs8TqPgMEogDG7cwyLgWcAd88ueZCJrP97k6qcLXZBQZB3pgjkAUHPXhSg1hbZCdB6qUZBqUWRcaU0JaI8rbprki3ppTZBrFNhHXddobBOBOS5jpBcl5rxmvCYdRR3k43kFYXzfxajT'
+token = 'EAAd3GIyrbFEBAIZBSJnZCF7aUUKVsT7bgPf865v6vSqatUZB02fae4OmuIbESIBnDEubMHaEOyIuZCVPXgZCcZCTv7rK08L9i15fZBjE8LChoayu6alZAZAHlNZAEDrbmkFtpHiZBkSZCuqvmGeHIdOJnm0cvBAeORU8YfnUevrNP3Xh3DwPnrhVjicld48K0StdO5FsZCa5jTIaceNErVs693r0y'
 link = 'https://graph.facebook.com/v3.2/100565557630187/events?pretty=0&limit=2000&access_token=' + token
 processed = 0
 
@@ -72,7 +72,7 @@ def updateDatabase(outputEventBook,field,i,date=False,layer2=None,layer3=None,la
             tempd = parser.parse(outputEventBook['data'][i][field])
             return tempd
 
-    elif layer2 == None:      # layer1 function
+    elif layer2 == None:      # function
         if field in outputEventBook:
             temp = outputEventBook[field]
             return temp
