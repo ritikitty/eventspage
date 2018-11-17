@@ -37,8 +37,8 @@ Author:Denis Samardjiev
     =Footer
     =Media Queries
 */
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:700,400,300,100|Montserrat:400,700);
+@import url(../fonts/AdobeSongStd-Light.otf);
 
 /* =Common Styles
 -------------------------------------------------------------- */
