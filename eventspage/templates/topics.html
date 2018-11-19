@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <body>
+    <div class="container">
+      <ol class="breadcrumb my-4">
+        <li class="breadcrumb-item"><a href="{% url 'boards' %}">Boards</a></li>
+        <li class="breadcrumb-item active">{{ boards.name }}</li>
+      </ol>
+    </div>
+{% endblock %}

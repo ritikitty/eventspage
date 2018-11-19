@@ -15,11 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url
+
+
 from boards import views
 from events import pages
 
 urlpatterns = [
-    url(r'^$', views.home, name='home'),
-    url(r'^events/', pages.home, name='events'),
+    url(r'^$', pages.home, name='home'),
+
+    # forum sites
+    url(r'^forum/boards/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
+    url(r'^forum/', views.boards, name='boards'),
+    
+
+    # events urls
+    url(r'^events/', pages.events, name='events'),
+
     url(r'^admin/', admin.site.urls),
 ]
