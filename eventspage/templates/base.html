@@ -60,7 +60,7 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand scroll-link" href="#home" data-id="home"><span class="icon-handle-streamline-vector logo"></span></a>
+                            <a href="{% url 'home' %}" class="navbar-left"><img src="{% static 'img/logo.png' %}" height="70" width="70"></a>
 						</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,7 +68,7 @@
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="{% url 'home' %}">Home</a></li>
 							<li><a href="{% url 'events' %}">Events</a></li>
-							<li><a href="#services" data-id="services" class="scroll-link">News</a></li>
+							<li><a href="#services">News</a></li>
 							<li><a href="{% url 'boards' %}">Forum</a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
