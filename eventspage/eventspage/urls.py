@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url
+from django.urls import include, path
 
 
 from boards import views
@@ -27,6 +28,8 @@ urlpatterns = [
     url(r'^forum/boards/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
     url(r'^forum/', views.boards, name='boards'),
     
+    # login
+    url(r'^accounts/', include('allauth.urls')),
 
     # events urls
     url(r'^events/(?P<pk>\d+)/$', pages.singleevent, name='singleevent'),

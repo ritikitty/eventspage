@@ -40,7 +40,20 @@ INSTALLED_APPS = [
 
     'boards',
     'events',
+
+    # allauth
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # SSL
+    'django_extensions',
+
+    'allauth.socialaccount.providers.facebook',
 ]
+
+# ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'https'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -126,3 +139,16 @@ STATIC_URL = '/static/'
 
 
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static'), ]
+
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
