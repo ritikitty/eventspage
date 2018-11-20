@@ -904,7 +904,7 @@ ul.social-buttons li a:active {
 
 .navbar-default {
 	font-family: "Montserrat",sans-serif;
-	font-size: 12px;
+    font-size: 12px;
 	background: rgb(47, 47, 47) none repeat scroll 0% 0%;
 	text-transform: uppercase;
 }
@@ -914,6 +914,7 @@ ul.social-buttons li a:active {
 	line-height: 3.3;
     font-weight: 400;
 }
+
 
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
     color: rgba(255, 255, 255, 0.60);

@@ -6,7 +6,7 @@
 	<meta name="description" content="Tech Base">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>Tech Base</title>
-	
+
 	<!-- Royal Preloader CSS -->
 	<link href=" {% static 'css/royal_preloader.css' %}" rel="stylesheet">
 
@@ -58,15 +58,17 @@
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-                            <a href="{% url 'home' %}" class="navbar-left"><img src="{% static 'img/logo.png' %}" height="70" width="70"></a>
+                                <span class="icon-bar"></span>
+                                
+                            </button>
+                            <ul>
+                            <li><a href="{% url 'home' %}" class="navbar-brand">Tech Base</a></li>
+                            </ul>
 						</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="{% url 'home' %}">Home</a></li>
 							<li><a href="{% url 'events' %}">Events</a></li>
 							<li><a href="#services">News</a></li>
 							<li><a href="{% url 'boards' %}">Forum</a></li>

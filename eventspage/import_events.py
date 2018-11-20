@@ -4,7 +4,7 @@ from dateutil import parser
 from django.utils.dateparse import parse_date
 from events.models import Event
 
-token = 'EAAd3GIyrbFEBAHBziaSFmltTf633ApSM311Jh2DhL9NZAj7aXZA4YDZA2ZAqFC0csYjeZC48k9mFRIQt0mvEgdlByNQD9WFZAmPhId9ClAEfqcWkLOdrBre1S9fItayGNN132B4bAPHdHKCZAcMNT7Qq61R0b2mXv4ECNXzIZCkUhRZABRKjEZAEIXdCTKrzZBhgWtSbadb6ZBkZCI3Ry9KozOi7z'
+token = 'EAAd3GIyrbFEBAM8RzKo7HjuoUHCXY92uFaBKZBNyzLXq1cnuHzgpM47BioXzqflq8vzuhoD1CCeQpO9lhZBVkizZAGOGlAvMrSdot3BuVAFvFmOGXoZBsifrQIkJFzXZAl4pqxQfK2SVSfKEsL1YZCL9silCBsnCXqW9OCmUwTUKExhfjwhrvwr1P9l4JibZAKNRJBtysjbvAZDZD'
 link = 'https://graph.facebook.com/v3.2/100565557630187/events?pretty=0&limit=2000&access_token=' + token
 processed = 0
 
@@ -106,6 +106,7 @@ for i in range(len(outputEventBook['data'])):
         # get some stuff
         endTime = updateDatabase(outputEventBook,'end_time',i,True,'data')
         descriptionTemp = updateDatabase(outputEventBook,'description',i,False,'data')
+        descriptionTemp = descriptionTemp.replace('\n', '<br>')
         placeName = updateDatabase(outputEventBook,'name',i,False,'data','place')
 
         if 'location' in outputEventBook['data'][i]['place']:

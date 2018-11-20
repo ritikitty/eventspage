@@ -29,6 +29,7 @@ urlpatterns = [
     
 
     # events urls
+    url(r'^events/(?P<pk>\d+)/$', pages.singleevent, name='singleevent'),
     url(r'^events/', pages.events, name='events'),
 
     url(r'^admin/', admin.site.urls),
