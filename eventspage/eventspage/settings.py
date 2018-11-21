@@ -163,7 +163,7 @@ SOCIALACCOUNT_PROVIDERS = {'facebook':
         'name',
         'first_name',
         'last_name',
-        'events',
+        #'events',
         'friends'],
     'VERSION': 'v2.4'
    }
