@@ -28,7 +28,6 @@ urlpatterns = [
     url(r'^forum/boards/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
     url(r'^forum/', views.boards, name='boards'),
     
-    # login
     url(r'^accounts/', include('allauth.urls')),
 
     # events urls
