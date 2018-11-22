@@ -58,15 +58,19 @@
 				<div class="row">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
+                        <ul class="nav navbar-nav navbar-right">
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
 								<span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
-                                
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
                             </button>
-                            <li><a href="{% url 'home' %}" class="navbar-brand">Tech Base</a></li>
-						</div>
+                            <li><a href="{% url 'home' %}">Tech Base ॐ</a></li>
+                            <!--<li><a href="{% url 'home' %}" class="navbar-brand">Tech Base</a></li>-->
+                        </ul>
+					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -90,7 +94,6 @@
 	</header>
     <!-- End Header -->
     
-
     {% block content %}
     {% endblock %}
 
@@ -104,18 +107,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 text-center">
-                    <span class="icon-handle-streamline-vector logo"></span>
-                    <h2 class="theme-title">Particles<span class="theme-title-smaller">Theme</span></h2>
-                    <a href="#"><span class="ion-social-twitter social-icons-dark-hover mr15"></span></a>
+                    <h2 class="theme-title">Tech<span class="theme-title-smaller">Base</span></h2>
                     <a href="#"><span class="ion-social-facebook social-icons-dark-hover mr15"></span></a>
-                    <a href="#"><span class="ion-social-googleplus-outline social-icons-dark-hover"></span></a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 text-small text-center">
                     <hr>
                     <button type="button" class="btn btn-primary btn-up-footer btn-lg scroll-top">Up</button>
-                    <p class="no-margin">&copy; Denis Samardjiev</p>
+                    <p class="no-margin">&copy; Orell Hürzeler</p>
                 </div><!-- /.column -->
             </div><!-- /.row -->
         </div><!-- /.container -->
