@@ -39,7 +39,11 @@
 	 
 	<!-- RS5.0 Layers and Navigation Styles -->
 	<link rel="stylesheet" type="text/css" href=" {% static 'revolution/css/layers.css' %}">
-	<link rel="stylesheet" type="text/css" href=" {% static 'revolution/css/navigation.css' %}">	
+    <link rel="stylesheet" type="text/css" href=" {% static 'revolution/css/navigation.css' %}">
+    
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 
 </head>
 
@@ -70,11 +74,12 @@
 							<li><a href="{% url 'events' %}">Events</a></li>
 							<li><a href="#services">News</a></li>
                             <li><a href="{% url 'boards' %}">Forum</a></li>
-                            <li><a>
-                                {% if user.is_authenticated %}
-                                {{ user.username }}
-                                {% endif %}
-                            </a></li>
+                            {% if user.is_authenticated %}
+                            <li><a>{{ user.username }}</a></li>
+                            <li><a href="{% url 'account_logout' %}"">Logout</a></li>
+                            {% else %}
+                            <li><a href="{% url 'account_login' %}">Login</a></li>
+                            {% endif %}
 
 						</ul>
 					</div><!-- /.navbar-collapse -->
