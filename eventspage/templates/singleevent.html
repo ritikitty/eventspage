@@ -2,6 +2,21 @@
 {% load static %}
 
 
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
 
 {% block content %}
 
@@ -17,33 +32,39 @@
 
         <div class="row mb30">
             <div class="col-sm-9 leftReveal">
-              <h5 class="heading-1 mb20">Description</h5>
-              <p class="lead no-margin" id="x">{{ event.description }}</p>
-              <script>
-                  var messagetoSend = document.getElementById('x').value.replace(/\n/g, "<br />");
-                  alert(messagetoSend);
-                  </script>
+              <h5 class="heading-1 mb20">Beschrieb</h5>
+              <p class="lead no-margin" id="x">{{ event.description | safe }}</p>
+            </div><!-- /.column -->
+          
+            <div class="col-sm-3 mt30-xs rightReveal">
+              <h5 class="heading-1 mb20">Ort</h5>
+              <p class="no-margin text-small"><i>{{ event.place_name }}</i></p>
+              <p class="no-margin text-small"><i>{{ event.place_city }}</i></p>
+              <p class="no-margin text-small"><i>{{ event.place_country }}</i></p>
             </div><!-- /.column -->
             <div class="col-sm-3 mt30-xs rightReveal">
-              <h5 class="heading-1 mb20">Quote</h5>
-              <p class="no-margin text-small"><i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus quibusdam."</i></p>
+              <h5 class="heading-1 mb20">Blabla</h5>
+              <p class="no-margin text-small"><i>{{ event.place_name }}</i></p>
+              <p class="no-margin text-small"><i>{{ event.place_city }}</i></p>
+              <p class="no-margin text-small"><i>{{ event.place_country }}</i></p>
+            </div><!-- /.column -->
             </div><!-- /.column -->
           </div><!-- /.row -->
+
+          <div class="col-sm-9 leftReveal" id="map"></div>
+          <script>
+            var map;
+            function initMap() {
+              map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+              });
+            }
+          </script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQUVe_VGBHELb31gUiOrcNF3c9GQe_fW4&callback=initMap"
+          async defer></script>
         </div><!-- /.row -->
 
-        <div class="row mb15">
-          <div class="col-sm-5 leftReveal">
-            <h5 class="heading-1 mb20">Our Trade</h5>
-            <h3 class="mb15 no-margin-top">Designing, Developing, and <br>Innovating for people like you...</h3>
-            <p class="no-margin text-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tristiq enim. Integer eu <strong>neque</strong> arcu. Aenean sed odio nibh. Cras imperdiet, arcu eget dictum vestibulum elit.</p>
-          </div><!-- /.column -->
-          <div class="col-sm-7 mt30-xs rightReveal">
-            <h5 class="heading-1 mb20">How we started it</h5>
-            <span class="icon-handle-streamline-vector logo-about"></span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras est urna, imperdiet eget sem at, pellentesque cursus elit. Etiam id ante et elit interdum sollicitudin. Cras imperdiet, arcu eget dictum vestibulum elit.</p>
-            <p>Curabitur egestas interdum ex, sed commodo ipsum consectetur vitae. Nulla auctor ante erat. Class aptent taciti sociosqu nostra enean sed.</p>
-          </div><!-- /.column -->
-        </div><!-- /.row -->
 
       </div><!-- /.container -->
     </section><!-- /.section -->

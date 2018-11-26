@@ -4,7 +4,9 @@
 	<meta charset="utf-8"/>
 	<meta name="author" content="Orell Hürzeler" />
 	<meta name="description" content="Tech Base">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    
+
 	<title>Tech Base</title>
 
 	<!-- Royal Preloader CSS -->
@@ -44,6 +46,19 @@
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
 
 </head>
 
@@ -63,6 +78,7 @@
 								<span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
 								<span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -119,28 +135,6 @@
 
     <!-- Javascript Files -->
     <script type="text/javascript" src=" {% static 'js/bootstrap.min.js' %}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArLNT3t4qsJEBmR0R9P_6ueLIQz0Jvt1M&callback=initMap" async defer></script>
-    <script type="text/javascript">
-        /* ---- Google Maps ---- */
-        function initMap() {
-            var mapOptions = {
-                zoom: 15,
-                zoomControl: false,
-                scaleControl: false,
-                scrollwheel: false,
-                disableDoubleClickZoom: true,
-                center: new google.maps.LatLng(40.6700, -73.9400), // New York
-                styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
-            };
-            var mapElement = document.getElementById('map');
-            var map = new google.maps.Map(mapElement, mapOptions);
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(40.6700, -73.9400),
-                map: map,
-                title: 'Our Office!'
-            });
-        }
-    </script>
     <script type="text/javascript" src=" {% static 'js/jquery.mixitup.js' %}"></script>
     <script type="text/javascript" src=" {% static 'js/form-validator.min.js' %}"></script>  
     <script type="text/javascript" src=" {% static 'js/jquery.inview.min.js' %}"></script>

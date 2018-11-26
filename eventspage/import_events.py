@@ -3,8 +3,9 @@ import json
 from dateutil import parser
 from django.utils.dateparse import parse_date
 from events.models import Event
+import re
 
-token = 'EAAd3GIyrbFEBAM8RzKo7HjuoUHCXY92uFaBKZBNyzLXq1cnuHzgpM47BioXzqflq8vzuhoD1CCeQpO9lhZBVkizZAGOGlAvMrSdot3BuVAFvFmOGXoZBsifrQIkJFzXZAl4pqxQfK2SVSfKEsL1YZCL9silCBsnCXqW9OCmUwTUKExhfjwhrvwr1P9l4JibZAKNRJBtysjbvAZDZD'
+token = 'EAAd3GIyrbFEBADdSrbuhYr43w1sKCrQ3j2tP7I4j2ihi6wmZAAaDGk31lxOW07a964N0vBFowsQiaj9awOr62D8drAyJs5MXZBmOcocpZAQQxCglCsSo11o8lTEIjmDmTRYSHUyiw5yIHlZAZApZAas2v4zyuGmLGgj439E2iuZAPQKCZCfRT7QyZB8J9Alsfgo9MlZA9ecS6e6QZDZD'
 link = 'https://graph.facebook.com/v3.2/100565557630187/events?pretty=0&limit=2000&access_token=' + token
 processed = 0
 
@@ -107,6 +108,9 @@ for i in range(len(outputEventBook['data'])):
         endTime = updateDatabase(outputEventBook,'end_time',i,True,'data')
         descriptionTemp = updateDatabase(outputEventBook,'description',i,False,'data')
         descriptionTemp = descriptionTemp.replace('\n', '<br>')
+        #descriptionURL = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', descriptionTemp)
+        #for url in descriptionURL:
+        #    descriptionTemp = descriptionTemp.replace(url, '<a href="' + url + '</a>')
         placeName = updateDatabase(outputEventBook,'name',i,False,'data','place')
 
         if 'location' in outputEventBook['data'][i]['place']:
