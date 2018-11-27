@@ -1,723 +1,323 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block head %}
+{{ block.super }}
+{% endblock %}
+
+
+{% block navbar_desktop %}
+{{ block.super }}
+{% endblock %}
 
 
 {% block content %}
-<body>
-	<!-- Start Slider Revolution -->
-	<div id="home" class="rev_slider_wrapper">
-		<div class="rev_slider" data-version="5.0" id="slider1">
-			<ul>
-				<!-- Slide 1 -->
-				<li data-delay="9000" 
-				data-description="Particles Bootstrap Theme" 
-				data-transition="zoomin"
-				data-easein="default"
-				data-easeout="default"
-				data-masterspeed="default" 
-				data-param1="test" 
-				data-rotate="0"
-				data-thumb="{% static 'img/deko1.jpg' %}"
-				data-slotamount="default" 
-				data-title="Flexibility">
 
-					<!-- MAIN IMAGE -->
-					<img alt=""
-					data-bgfit="cover"
-					data-bgposition="center center"
-					data-bgrepeat="no-repeat"
-					data-no-retina=""
-					height="800"
-					src=" {% static 'img/deko1.jpg' %}"
-					style="background-color:#000;"
-					width="1732">
+			<!-- Beginn....  -->
 
-					<div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0" 
-					data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-					data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
-					data-fontsize="['70','70','70','45']"
-					data-lineheight="['70','70','70','50']"
-					data-whitespace="nowrap"
-					data-transform_idle="o:1;"
-					data-transform_in="z:0;rX:0;rY:0;rZ:5deg;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Back.easeOut;" 
-					data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-					data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-					data-start="1000"  
-					style="z-index: 6; white-space: nowrap;">Willkomme...
-					</div>
-
-					<div class="tp-caption NotGeneric-SubTitle tp-resizeme rs-parallaxlevel-0" 
-					data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-					data-y="['middle','middle','middle','middle']" data-voffset="['52','52','52','51']" 
-					data-transform_idle="o:1;"
-					data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-					data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-					data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
-					data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-					data-start="1500" 
-					style="z-index: 7; white-space: nowrap;"> uf de site för die beste szene partys i de schwiiz!
-					</div>
-				</li>
-
-				<!-- Slide 2 -->
-				<li data-delay="9000" 
-				data-description="Particles Bootstrap Theme" 
-				data-easein="default"
-				data-easeout="default" 
-				data-masterspeed="default" 
-				data-param1="test" 
-				data-rotate="0" 
-				data-slotamount="default" 
-				data-title="Raleway Intro"
-				data-thumb=""
-				data-transition="slideremoveup">
-
-					<!-- MAIN IMAGE -->
-					<img alt=""
-					data-bgfit="cover"
-					data-bgposition="center center"
-					data-bgrepeat="no-repeat"
-					data-no-retina=""
-					height="800"
-					src=" {% static 'img/deko2.jpg' %}"
-					style="background-color:#000;"
-					width="1732">
-
-					<div class="tp-caption color-switch icon-handle-streamline-vector"
-					data-x="center"
-					data-y="105"
-					data-speed="600"
-					data-start="1200"
-					data-end="9400"
-					data-endspeed="600"
-					data-transform_idle="o:1;"
-					data-transform_in="y:10px;opacity:0;s:700;e:Power3.easeOut;"
-					data-transform_out="y:10px;opacity:0;s:500;e:Power2.easeInOut;"
-					style="font-family:'untitled-font-1';font-size:50px;">
-					</div>
-
-					<div class="tp-caption"
-					data-x="center"
-					data-y="186"
-					data-speed="600"
-					data-start="1200"
-					data-end="9400"
-					data-endspeed="600"
-					data-transform_idle="o:1;"
-					data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
-					data-transform_out="y:50px;opacity:0;s:500;e:Power2.easeInOut;"
-					style="padding: 0px 3px; font-size: 41px; visibility: visible; border-bottom:1px solid rgba(255, 255, 255, 0.24); color:#fff; font-family: 'Roboto' sans-serif; font-weight:100;">
-					zämegfasst, ufbereited und sidefiin serviert...
-					</div>
-					
-					<div class="tp-caption"
-					data-x="center"
-					data-y="275"
-					data-speed="600"
-					data-start="1200"
-					data-end="9400"
-					data-endspeed="600"
-					data-transform_idle="o:1;"
-					data-transform_in="y:150px;opacity:0;s:700;e:Power3.easeOut;"
-					data-transform_out="y:150px;opacity:0;s:500;e:Power2.easeInOut;"
-					style="padding: 0px 3px; font-size: 20px; visibility: visible; color:#e0e0e0; font-family: 'Roboto' sans-serif; font-weight:100; text-align:center;">
-					<p>Wotsch wedermou rechtig go stampfe? <br> De besch do genau rechtig! :) </p>
-					</div>
-				</li>
-
-			</ul>
-		</div>
-	</div><!-- /rev slider -->
-	<!-- End Slider Revolution -->
-
-	<!-- Begin Intro -->
-	<section id="ideology">
-
-		<!-- Begin Hello Intro -->
-		<div id="hello-intro" class="pt60 pb60">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-2 col-sm-3">
-						<h2 class="no-margin rotateLeftReveal">Heey!</h2>
-					</div>
-					<div class="col-lg-10 col-sm-9 mt30-xs">
-						<h3 class="no-margin rightReveal"><strong>«Me sött grundsätzlich vell meh fiire.»</strong>, het mou en weise Maa gseit...<br> Mer send absolut glicher meinig & näme üs das z härze.</h3>
-					</div>
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</div><!-- /.div -->
-		<!-- End Hello Intro -->
-
-		<!-- Begin Our Process Title -->
-		<div id="our-process-title" class="pt30 pb30">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h4 class="no-margin">Schwiizer szene stuff...</h4>
-					</div>
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</div><!-- /.div -->
-		<!-- End Our Process Title -->
-
-		<!-- Begin Our Process -->
-		<div id="our-process">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50">
-						<div class="leftReveal">
-							<div class="process-intro">
-								<h3 class="process-number">01</h3>
-								<div><span class="process-icons pe-7s-users rotateBottomReveal"></span></div>
-								<h2>Events</h2>
-							</div>
-							<div class="process-content">
-								<div><span class="process-icons pe-7s-users"></span></div>
-								<h2 class="mt15 mb20">Events</h2>
-								<p class="no-margin">us de Region - för d region</p>
-							</div>
-						</div><!-- /.animation -->
-					</div><!-- /.column -->
-					<div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50">
-						<div class="bottomReveal">
-							<div class="process-intro">
-								<h3 class="process-number">02</h3>
-								<div><span class="process-icons pe-7s-diamond rotateBottomReveal"></span></div>
-								<h2>Forum</h2>
-							</div>
-							<div class="process-content">
-								<div><span class="process-icons pe-7s-diamond"></span></div>
-								<h2 class="mt15 mb20">Forum</h2>
-								<p class="no-margin">Hesch öbis wo der ufem Häze liit, sägs üs.</p>
-							</div>
-						</div><!-- /.animation -->
-					</div><!-- /.column -->
-					<div class="col-sm-4 col-md-4 col-lg-4 process-box text-center pt50 pb50 no-border-right">
-						<div class="rightReveal">
-							<div class="process-intro">
-								<h3 class="process-number">03</h3>
-								<div><span class="process-icons pe-7s-rocket rotateBottomReveal"></span></div>
-								<h2>News</h2>
-							</div>
-							<div class="process-content">
-								<div><span class="process-icons pe-7s-rocket"></span></div>
-								<h2 class="mt15 mb20">News</h2>
-								<p class="no-margin">Check s neuste us de szene...</p>
-							</div>
-						</div><!-- /.animation -->
-					</div><!-- /.column -->
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</div><!-- /.div -->
-		<!-- End Our Process -->
-		</section><!-- /.section -->
-		<!-- End Intro -->
-
-		<!-- Begin About -->
-		<section id="about" class="background1 section-padding">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 section-title text-center">
-						<h2>Wie funktioniert die Plattform?</h2>
-						<span class="section-divider"></span>
-					</div><!-- /.column -->
-				</div><!-- /.row -->
-				<div class="row mb15">
-					<div class="col-sm-9 mt30-xs leftReveal">
-						<h5 class="heading-1 mb20">Vo üsere Szene, för üsi Szene!</h5>
-						<span class="logo-about">ॐ</span>
-						<p>Mit Techbase schaffe mer en Plattform wo vo de schwizer Goaszene selber ufbaut und entwickled wird. Mer wend en Site wo alles Lokale, chlini Partys im Wald sowie au grossi Festivals i de Schwiz und im nöchere Unfeld ufglisted.</p>
-						<p>Wenn du dich do via Facebook ahmäldisch, werde automatisch d Verahstaltige wo du interessiert, oder zuegseit hesch uf die Sito öberno und ufgfüehrt. Sägs ruhig dine Kollege wiiter, de hemmer glii JEDE Event ufglisted! <3</p>
-					</div><!-- /.column -->
-					<div class="col-sm-3 rightReveal">
-						<h5 class="heading-1 mb20">Our Trade</h5>
-						<h3 class="mb15 no-margin-top">Mer säge danke!</h3>
-						<p class="no-margin text-small">Träumt hemmer devo, en site z ha mit genau dene Partys, ond zwar ALLI PARTYS, wo mer wette go und somit üsi gliebti Goaszene lo hochläbe. Merci!</p>
-					</div><!-- /.column -->
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</section><!-- /.section -->
-		<!-- End About -->
-
-
-		
-
-
-
-	<!-- Begin Services -->
-	<section id="services" class="background2 section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 section-title text-center">
-					<h2>Services</h2>
-					<span class="section-divider"></span>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-
-			<div class="row">
-				<!-- Item 1 -->
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<div class="services-box leftReveal">
-						<span class="pe-7s-airplay services-icon"></span>
-						<h3 class="service-name">1. Web Design</h3>
-						<p class="text-small">Lorem ipsum dolor sit amet, consectet adipiscing elit. Cras est urna, imperd eget sem at, pellentes que cursus elit.</p>
-						<button type="button" class="btn btn-default mt10" data-toggle="modal" data-target="#item1-services">Info</button>
-					</div>
-				</div><!-- /.column -->	
-			    <!-- Item 1 Modal -->
-				<div class="modal fade" id="item1-services" tabindex="-1" role="dialog">
-				    <div class="modal-dialog">
-				        <div class="modal-content">
-				            <div class="modal-header">
-				                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ion-ios-close-empty"></span>
-				                </button>
-				                <span class="pe-7s-airplay services-icon-2"></span>
-				                <h4 class="service-title">Web Design</h4>
-				            </div>
-				            <div class="modal-body">
-				                <p>No, thank ye, Bunger, said the English Captain, "he's welcome to the arm he has, since I can't help it, and didn't know him then; but not to another one. No more White Whales for me; I've lowered for him once.</p>
-				                <h5 class="heading-1 modal-heading mb20">Why us</h5>
-				                <p>"Well, then," interrupted Bunger, "give him your left arm for bait to get the right. Do you know, gentlemen"—very gravely and mathematically bowing to each Captain in succession—"Do you know, gentlemen, that the digestive organs of the whale are so inscrutably constructed by Divine Providence, that it is quite impossible for him to completely digest even a man's arm? And he knows it too.</p>
-				                <h5 class="heading-1 modal-heading mb20">Focusing</h5>
-				                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed.</p>
-				                <h5 class="heading-1 modal-heading mb20">Professionals</h5>
-				                <p class="no-margin-bottom">"Good God!" cried the English Captain, to whom the question was put. "What's the matter? He was heading east, I think.—Is your Captain crazy?" whispering Fedallah. Phasellus pulvinar lacinia elit nec tristique.</p>
-				            </div>
-				        </div><!-- /.modal-content -->
-				    </div><!-- /.modal-dialog -->
-				</div><!-- /.modal -->
-
-				<!-- Item 2 -->
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 mt30-xs">
-					<div class="services-box topReveal">
-						<span class="services-badge badge">New</span>
-						<span class="pe-7s-phone services-icon"></span>
-						<h3 class="service-name">2. Applications</h3>
-						<p class="text-small">Lorem ipsum dolor sit amet, consectet adipiscing elit. Cras est urna, imperd eget sem at, pellentes que cursus elit.</p>
-						<button type="button" class="btn btn-default mt10" data-toggle="modal" data-target="#item2-services">Info</button>
-					</div>
-				</div><!-- /.column -->	
-			    <!-- Item 2 Modal -->
-				<div class="modal fade" id="item2-services" tabindex="-1" role="dialog">
-				    <div class="modal-dialog">
-				        <div class="modal-content">
-				            <div class="modal-header">
-				                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="ion-ios-close-empty"></span>
-				                </button>
-				                <span class="pe-7s-phone services-icon-2"></span>
-				                <h4 class="service-title">Applications</h4>
-				            </div>
-				            <div class="modal-body">
-				                <p>No, thank ye, Bunger, said the English Captain, "he's welcome to the arm he has, since I can't help it, and didn't know him then; but not to another one. No more White Whales for me; I've lowered for him once.</p>
-				                <h5 class="heading-1 modal-heading mb20">Why us</h5>
-				                <p>"Well, then," interrupted Bunger, "give him your left arm for bait to get the right. Do you know, gentlemen"—very gravely and mathematically bowing to each Captain in succession—"Do you know, gentlemen, that the digestive organs of the whale are so inscrutably constructed by Divine Providence, that it is quite impossible for him to completely digest even a man's arm? And he knows it too.</p>
-				                <h5 class="heading-1 modal-heading mb20">Focusing</h5>
-				                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed.</p>
-				                <h5 class="heading-1 modal-heading mb20">Professionals</h5>
-				                <p class="no-margin-bottom">"Good God!" cried the English Captain, to whom the question was put. "What's the matter? He was heading east, I think.—Is your Captain crazy?" whispering Fedallah. Phasellus pulvinar lacinia elit nec tristique.</p>
-				            </div>
-				        </div><!-- /.modal-content -->
-				    </div><!-- /.modal-dialog -->
-				</div><!-- /.modal -->
-
-				<!-- Item 3 -->
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 mt30-sm mt30-xs">
-					<div class="services-box rightReveal">
-						<span class="pe-7s-camera services-icon"></span>
-						<h3 class="service-name">3. Photography</h3>
-						<p class="text-small">Lorem ipsum dolor sit amet, consectet adipiscing elit. Cras est urna, imperd eget sem at, pellentes que cursus elit.</p>
-						<button type="button" class="btn btn-default mt10" data-toggle="modal" data-target="#item3-services">Info</button>
-					</div>
-				</div><!-- /.column -->	
-			    <!-- Item 3 Modal -->
-				
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</section><!-- /.section -->
-	<!-- End Services -->
-
-
-	<section id="zitate" class="background1 section-padding-top">
-		<!-- Begin Quote Carousel -->
-		<div id="carousel" class="testimonial-carousel pt40 pb20">    				
-			<div class="container">
-				<div class="row">
-					<div class="col-md-10 col-md-offset-1 text-center">
-						<span class="pe-7s-close heading-3-icon"></span>
-						<h2 class="heading-3">E chline Begleiter före hüttig Tag... ॐ</h2>
-						<div class="fade-quote-carousel carousel slide" id="quote-carousel" data-ride="carousel" data-interval="3000">
-							<!-- Carousel indicators -->
-							<ol class="carousel-indicators">
-								<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-								<li data-target="#quote-carousel" data-slide-to="1"></li>
-								<li data-target="#quote-carousel" data-slide-to="2"></li>
-							</ol>
-							<!-- Carousel items -->
-							<div class="carousel-inner">
-								<div class="active item">
-									<blockquote>
-										<p>"Be yourselves..."</p>
-									</blockquote>
-								</div>
-								<div class="item">
-									<blockquote>
-										<p>"Phasellus pulvinar lacinia elit nec tristique. Nulla accumsan velit id nulla tincidunt ornare. Sed cursus urna sed. Aliquam elementum orci at dolor viverra."</p>
-									</blockquote>
-								</div>
-								<div class="item">
-									<blockquote>
-										<p>"Phasellus pulvinar lacinia elit nec tristique. Nulla accumsan velit id nulla tincidunt ornare. Sed cursus urna sed. Aliquam elementum orci at dolor viverra."</p>
-									</blockquote>
-								</div>
-							</div>
-							
-						</div><!-- /.carousel -->	
-					</div><!-- /.column -->						
-				</div><!-- /.row -->
-			</div><!-- /.container -->
-		</div><!-- /.carousel -->
-		<!-- End Quote Carousel -->
-	</section><!-- /.section -->
-
-
-	<!-- Begin Work -->
-	<section id="work" class="background1 section-padding-top">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-12 section-title text-center">
-					<h2>Work</h2>
-					<span class="section-divider mb15"></span>
-					<p class="mb30 scaleReveal">We do awesome stuff, and yeah.</p>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-			<div class="row">
-				<div class="col-xs-12 text-center mb50">
-					<!-- Filter Buttons -->
-					<button class="filter btn btn-default btn-category btn-lg" data-filter="all">All</button>
-					<button class="filter btn btn-default btn-category btn-lg" data-filter=".identity">Identity</button>
-					<button class="filter btn btn-default btn-category btn-lg" data-filter=".print">Print</button>
-					<button class="filter btn btn-default btn-category btn-lg" data-filter=".graphics">Graphics</button>
-					<button class="filter btn btn-default btn-category btn-lg" data-filter=".web">Web</button>
-
-					<!-- Sort Buttons -->
-					<button class="sort btn btn-default btn-sort btn-lg" data-sort="my-order:asc"><span class="ion-ios-plus-empty"></span></button>
-					<button class="sort btn btn-default btn-sort btn-lg" data-sort="my-order:desc"><span class="ion-ios-minus-empty"></span></button>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-			<div id="thework">
-				<!-- Item 1 -->
-			    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix graphics" data-my-order="3">
-			    	<div class="portfolio-image-holder"><img src=" {% static 'images/work/1.jpg' %}" alt="1" class="img-responsive portfolio-image"></div>
-			    	<span class="portfolio-badge badge">Graphics</span>
-			    	<span class="portfolio-hover">
-						<span>
-							<a href="https://dribbble.com/" target="_blank">
-								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
-							</a>
-							<a href=" {% static 'images/work/1.jpg' %}" class="zoom" title="Equipt Design">
-								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
-							</a>
-							<span class="project-title no-margin-bottom mt10">Equipt Design</span>
-						</span>
-					</span>
-			    </div><!-- /.column -->
-
-			    <!-- Item 2 -->
-			    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix print identity" data-my-order="6">
-			    	<div class="portfolio-image-holder"><img src=" {% static 'images/work/2.jpg' %}" alt="2" class="img-responsive portfolio-image"></div>
-			    	<span class="portfolio-badge badge">Print + Identity</span>
-			    	<span class="portfolio-hover">
-						<span>
-							<a href="https://dribbble.com/" target="_blank">
-								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
-							</a>
-							<a href=" {% static 'images/work/2.jpg' %}" class="zoom" title="Goodman's Burger">
-								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
-							</a>
-							<span class="project-title no-margin-bottom mt10">Goodman's Burger</span>
-						</span>
-					</span>
-			    </div><!-- /.column -->
-
-			    <!-- Item 3 -->
-			    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix identity" data-my-order="4">
-			    	<div class="portfolio-image-holder"><img src=" {% static 'images/work/3.jpg' %}" alt="3" class="img-responsive portfolio-image"></div>
-			    	<span class="portfolio-badge badge">Print</span>
-			    	<span class="portfolio-hover">
-						<span>
-							<a href="https://dribbble.com/" target="_blank">
-								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
-							</a>
-							<a href=" {% static 'images/work/3.jpg' %}" class="zoom" title="Paper Mockup">
-								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
-							</a>
-							<span class="project-title no-margin-bottom mt10">Paper Mockup</span>
-						</span>
-					</span>
-			    </div><!-- /.column -->
-
-			    <!-- Item 4 -->
-			    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix graphics" data-my-order="5">
-			    	<div class="portfolio-image-holder"><img src=" {% static 'images/work/4.jpg' %}" alt="4" class="img-responsive portfolio-image"></div>
-			    	<span class="portfolio-badge badge">Graphics</span>
-			    	<span class="portfolio-hover">
-						<span>
-							<a href="https://dribbble.com/" target="_blank">
-								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
-							</a>
-							<a href=" {% static 'images/work/4.jpg' %}" class="zoom" title="Simple Pleasure">
-								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
-							</a>
-							<span class="project-title no-margin-bottom mt10">Simple Pleasure</span>
-						</span>
-					</span>
-			    </div><!-- /.column -->
-
-			    <!-- Item 5 -->
-			    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix print identity" data-my-order="2">
-			    	<div class="portfolio-image-holder"><img src=" {% static 'images/work/5.jpg' %}" alt="5" class="img-responsive portfolio-image"></div>
-			    	<span class="portfolio-badge badge">Print + Identity</span>
-			    	<span class="portfolio-hover">
-						<span>
-							<a href="https://dribbble.com/" target="_blank">
-								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
-							</a>
-							<a href=" {% static 'images/work/5.jpg' %}" class="zoom" title="Wine Bottles">
-								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
-							</a>
-							<span class="project-title no-margin-bottom mt10">Wine Bottles</span>
-						</span>
-					</span>
-			    </div><!-- /.column -->
-
-			    <!-- Item 6 -->
-			    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix web" data-my-order="1">
-			    	<div class="portfolio-image-holder"><img src=" {% static 'images/work/6.jpg' %}" alt="6" class="img-responsive portfolio-image"></div>
-			    	<span class="portfolio-badge badge">Web</span>
-			    	<span class="portfolio-hover">
-						<span>
-							<a href="https://dribbble.com/" target="_blank">
-								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
-							</a>
-							<a href=" {% static 'images/work/6.jpg' %}" class="zoom" title="Web UI">
-								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
-							</a>
-							<span class="project-title no-margin-bottom mt10">Web UI</span>
-						</span>
-					</span>
-			    </div><!-- /.column -->
-
-			    <!-- Item 7 -->
-			    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix graphics print" data-my-order="9">
-			    	<div class="portfolio-image-holder"><img src=" {% static 'images/work/7.jpg' %}" alt="7" class="img-responsive portfolio-image"></div>
-			    	<span class="portfolio-badge badge">Graphics + Print</span>
-			    	<span class="portfolio-hover">
-						<span>
-							<a href="https://dribbble.com/" target="_blank">
-								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
-							</a>
-							<a href=" {% static 'images/work/7.jpg' %}" class="zoom" title="Hello World">
-								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
-							</a>
-							<span class="project-title no-margin-bottom mt10">Hello World</span>
-						</span>
-					</span>
-			    </div><!-- /.column -->
-
-			    <!-- Item 8 -->
-			    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix web" data-my-order="7">
-			    	<div class="portfolio-image-holder"><img src=" {% static 'images/work/8.jpg' %}" alt="8" class="img-responsive portfolio-image"></div>
-			    	<span class="portfolio-badge badge">Web</span>
-			    	<span class="portfolio-hover">
-						<span>
-							<a href="https://dribbble.com/" target="_blank">
-								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
-							</a>
-							<a href=" {% static 'images/work/8.jpg' %}" class="zoom" title="We Create Mobile">
-								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
-							</a>
-							<span class="project-title no-margin-bottom mt10">We Create Mobile</span>
-						</span>
-					</span>
-			    </div><!-- /.column -->
-
-			    <!-- Item 9 -->
-			    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 portfolio-box no-padding mix web" data-my-order="8">
-			    	<div class="portfolio-image-holder"><img src=" {% static 'images/work/9.jpg' %}" alt="9" class="img-responsive portfolio-image"></div>
-			    	<span class="portfolio-badge badge">Web</span>
-			    	<span class="portfolio-hover">
-						<span>
-							<a href="https://dribbble.com/" target="_blank">
-								<span class="portfolio-links"><span class="ion-ios-arrow-right portfolio-links-icons"></span></span>
-							</a>
-							<a href=" {% static 'images/work/9.jpg' %}" class="zoom" title="Captain da Ship">
-								<span class="portfolio-links"><span class="ion-arrow-expand portfolio-links-icons"></span></span>
-							</a>
-							<span class="project-title no-margin-bottom mt10">Captain da Ship</span>
-						</span>
-					</span>
-			    </div><!-- /.column -->
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</section><!-- /.section -->
-	<!-- Begin Work -->
-
-	<!-- Begin Timeline -->
-	<section id="timeline" class="background1 section-padding-top">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 section-title text-center">
-					<h2>Timeline</h2>
-					<span class="section-divider"></span>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-			<div class="row">
-				<div class="col-lg-12">
-					<ul class="timeline pb80">
-
-						<!-- Item 1 -->
-						<li>
-							<div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src=" {% static 'images/timeline-1.jpg' %}"></div>
-							<div class="timeline-panel leftReveal">
-								<div class="timeline-heading">
-									<h5 class="heading-1 mb15">2015</h5>
-									<h4 class="subheading">We Began Our Venture</h4>
-								</div>
-								<div class="timeline-body">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-								</div>
-							</div>
-						</li>
-
-						<!-- Item 2 -->
-						<li class="timeline-inverted">
-							<div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src=" {% static 'images/timeline-2.jpg' %}"></div>
-							<div class="timeline-panel rightReveal">
-								<div class="timeline-heading">
-									<h5 class="heading-1 mb15">April 2016</h5>
-									<h4 class="subheading">A Company is in Mind</h4>
-								</div>
-								<div class="timeline-body">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-								</div>
-							</div>
-						</li>
-
-						<!-- Item 3 -->
-						<li>
-							<div class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src=" {% static 'images/timeline-3.jpg' %}"></div>
-							<div class="timeline-panel leftReveal">
-								<div class="timeline-heading">
-									<h5 class="heading-1 mb15">May 2016</h5>
-									<h4 class="subheading">We Launch The Hex Group</h4>
-								</div>
-								<div class="timeline-body"> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-								</div>
-							</div>
-						</li>
-
-						<!-- Item 4 -->
-						<li class="timeline-inverted">
-							<div  class="timeline-image scaleReveal"><img alt="" class="img-circle img-responsive" src=" {% static 'images/timeline-4.jpg' %}"></div>
-							<div class="timeline-panel rightReveal">
-								<div class="timeline-heading">
-									<h5 class="heading-1 mb15">July 2016</h5>
-									<h4 class="subheading">We Expand to 15 Employees</h4>
-								</div>
-								<div class="timeline-body">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</section><!-- /.section -->
-	<!-- End Timeline -->
-
-	<!-- Begin Contact -->
-	<section id="contact" class="background2 section-padding">
-		<div class="container">
-			<div class="row mb30">
-				<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 section-title text-center">
-					<h2>Contact</h2>
-					<span class="section-divider mb15"></span>
-					<p class="no-margin scaleReveal">Our team is from all over the world and we know how to deliver quality pixels from miles away.</p>
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-			<div class="row">
-				<div class="col-sm-5 col-lg-4">
-					<h5 class="heading-1 mb20">Visit Us</h5>
-					<h4 class="mb15">142 Pelican Drive • 1252nd Floor, Suite 420<br>New York City, New York 99912</h4>
-					<p class="no-margin text-xs-small">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates. Temporibus autem quibusdam et aut.</p>
-					<hr class="mini-hr">
-					<p class="text-xs-small mb5"><strong class="text-switch">Email:</strong> info@particle.com</p>
-					<p class="text-xs-small mb5"><strong class="text-switch">Phone:</strong> +1 212-249-2390</p>
-					<p class="text-xs-small mb5"><strong class="text-switch">Fax:</strong> +1 112-444-2390</p>
-				</div><!-- /.column -->
-				<div class="col-sm-6 col-lg-7 mt30-xs">
-					<form data-toggle="validator" id="contactForm" name="contactForm">
+			<div id="main">
+			<!-- Slider  -->
+				<div id="home" class="section">
+					<div class="container-fluid">
 						<div class="row">
-							<div class="col-sm-6">
-								<div class="form-group">
-									<div class="controls">
-										<input class="form-control" data-error="This section is required."
-										id="msg_subject" placeholder="Subject *" required="" type="text">
-										<div class="help-block with-errors"></div>
-									</div>
+							<div class="col-sm-12 p-0">
+								<div id="rev_slider" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
+									<ul>	
+										<!-- SLIDE  -->
+										<li data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-rotate="0" data-saveperformance="off" data-title="Slide">
+
+											<!-- MAIN IMAGE -->
+											<img src="{% static 'img/deko1.JPG' %}"  alt="" title="" width="1920" height="1100" data-lazyload="{% static 'images/Andi/main_slider_3.JPG' %}" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="150" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" />
+
+											<!-- LAYERS -->
+
+											<!-- LAYER NR. 3 -->
+											<div class="tp-caption Heli-Text-04 tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['1','0','0','-2']" 
+												 data-y="['middle','middle','middle','middle']" data-voffset="['-237','-212','-160','-120']" data-width="none"
+												 data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" 
+												 data-frames='[{"from":"y:-50px;opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+												 data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+												 data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
+											</div>
+
+											<!-- LAYER NR. 4 -->
+											<div class="tp-caption Heli-Heading-03 tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','2','2','0']" 
+												 data-y="['middle','middle','middle','middle']" data-voffset="['-57','-121','-80','-64']" data-fontsize="['80','80,'80','45']"
+												 data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" 
+												 data-frames='[{"from":"z:0;rX:0deg;rY:50;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1000,"to":"o:1;","delay":1380,"ease":"Power2.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+												 data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+												 data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><b>Willkomme...</b>
+											</div>
+
+											<!-- LAYER NR. 5 -->
+											<div class="tp-caption Heli-Text-05 tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+												 data-y="['middle','middle','middle','middle']" data-voffset="['80','28','60','18']" data-fontsize="['36','36','32','20']"
+												 data-lineheight="['51','51','40','30']" data-width="['770','770','700','423']" data-height="['158','158','158','none']"
+												 data-whitespace="normal" data-type="text" data-responsive_offset="on"
+												 data-frames='[{"from":"y:50px;opacity:0;","speed":950,"to":"o:1;","delay":2390,"split":"lines","splitdelay":0.1,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+												 data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+												 data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">uf de site för die beste szene partys i de schwiiz!
+									 		</div>
+										</li>
+
+									</ul>
 								</div>
-							</div><!-- /.column -->
-							<div class="col-sm-6">
-								<div class="form-group">
-									<div class="controls">
-										<input class="form-control" id="phone" placeholder="Phone" type="text">
-									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Next Gigs  -->
+				<div id="show" class="section bg-dark pt-10 pb-10">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-8 offset-sm-2">
+								<div class="text-center">
+									<h2 class="fz-40 fw-bolder white">NÄCHSTE GIGS</h2>
+									<h3 class="fz-20 fw-normal gray">2019</h3>
+									<p class="pt-2 pb-5 white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet.</p>
 								</div>
-							</div><!-- /.column -->
-						</div><!-- /.row -->
-						<div class="row mb10">
-							<div class="col-sm-6">
-								<div class="form-group">
-									<div class="controls">
-										<input class="form-control" data-error="This section is required." id="name" placeholder="Your Name *" required="" type="text">
-										<div class="help-block with-errors"></div>
-									</div>
-								</div>
-							</div><!-- /.column -->
-							<div class="col-sm-6">
-								<div class="form-group">
-									<div class="controls">
-										<input class="email form-control" data-error="This section is required." id="email" placeholder="Email *" required="" type="email">
-										<div class="help-block with-errors"></div>
-									</div>
-								</div>
-							</div><!-- /.column -->
-						</div><!-- /.row -->
+							</div>
+							<div class="col-sm-12">
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Friday, Sep 2nd 2016</td>
+											<td>Sunset Grill-North Myrtle Beach, SC</td>
+											<td><a href="#">Get ticket</a></td>
+										</tr>
+										<tr>
+											<td>Friday, Sep 2nd 2016</td>
+											<td>Cypress Bend Vineyard – Wagram, NC</td>
+											<td><a href="#">Get ticket</a></td>
+										</tr>
+										<tr>
+											<td>Friday, Sep 2nd 2016</td>
+											<td>Fun Sunday SOS – NMB</td>
+											<td><a href="#">Get ticket</a></td>
+										</tr>
+										<tr>
+											<td>Friday, Sep 2nd 2016</td>
+											<td>Sunset Grill-North Myrtle Beach, SC</td>
+											<td><a href="#">Get ticket</a></td>
+										</tr>
+										<tr>
+											<td>Friday, Sep 2nd 2016</td>
+											<td>Cypress Bend Vineyard – Wagram, NC</td>
+											<td><a href="#">Get ticket</a></td>
+										</tr>
+										<tr>
+											<td>Friday, Sep 2nd 2016</td>
+											<td>Fun Sunday SOS – NMB</td>
+											<td><a href="#">Get ticket</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Projekte  -->
+				<div id="projekte" class="section section-bg-3 pt-10 pb-10">
+					<div class="container">
 						<div class="row">
 							<div class="col-sm-12">
-								<div class="form-group">
-									<div class="controls">
-										<textarea class="form-control" data-error="This section is required." id="message" placeholder="Message *" required="" rows="5"></textarea>
-										<div class="help-block with-errors"></div>
+								<div class="project-carousel">
+									<div class="item row">
+										<div class="col-md-6">
+											<img src="{% static 'images/Andi/irrwisch_stone.JPG' %}" alt="" />
+										</div>
+										<div class="col-md-6">
+											<h2 class="title text-uppercase"><b>Irrwish</b> with Orchestra</h2>
+											<div class="content">
+												<h2 class="entry-title">
+													<a class="white text-uppercase" href="portfolio-detail.html">Stone and a Rose</a>
+												</h2>
+												<p class="terms">
+													<span>Vinyl</span><span>CD</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="item row">
+										<div class="col-md-6">
+											<img src="{% static 'images/Andi/irrwisch_stone.JPG' %}" alt="" />
+										</div>
+										<div class="col-md-6">
+											<h2 class="title text-uppercase"><b>featured</b>works</h2>
+											<div class="content">
+												<h2 class="entry-title">
+													<a class="white text-uppercase" href="portfolio-detail.html">Table Lamp</a>
+												</h2>
+												<p class="terms">
+													<span>Branding</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="item row">
+										<div class="col-md-6">
+											<img src="{% static 'images/Andi/irrwisch_stone.JPG' %}" alt="" />
+										</div>
+										<div class="col-md-6">
+											<h2 class="title text-uppercase"><b>featured</b>works</h2>
+											<div class="content">
+												<h2 class="entry-title">
+													<a class="white text-uppercase" href="portfolio-detail.html">Vinyl cover</a>
+												</h2>
+												<p class="terms">
+													<span>Print</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="item row">
+										<div class="col-md-6">
+											<img src="{% static 'images/Andi/irrwisch_stone.JPG' %}" alt="" />
+										</div>
+										<div class="col-md-6">
+											<h2 class="title text-uppercase"><b>featured</b>works</h2>
+											<div class="content">
+												<h2 class="entry-title">
+													<a class="white text-uppercase" href="portfolio-detail.html">Paper bag</a>
+												</h2>
+												<p class="terms">
+													<span>Branding</span><span>Print</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="item row">
+										<div class="col-md-6">
+											<img src="{% static 'images/Andi/irrwisch_stone.JPG' %}" alt="" />
+										</div>
+										<div class="col-md-6">
+											<h2 class="title text-uppercase"><b>featured</b>works</h2>
+											<div class="content">
+												<h2 class="entry-title">
+													<a class="white text-uppercase" href="portfolio-detail.html">Photofolio</a>
+												</h2>
+												<p class="terms">
+													<span>Branding</span><span>Print</span>
+												</p>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="row mt15">
-							<div class="col-sm-6">
-								<div id="msgSubmit" class="h4 hidden mt10 no-margin-bottom"></div> 
-							</div><!-- /.column -->
-							<div class="col-sm-6 text-right">
-								<button type="submit" id="submit" class="btn btn-default btn-lg">Send</button>
-							</div><!-- /.column -->
-						</div><!-- /.row -->
-					</form><!-- /.form -->
-				</div><!-- /.column -->
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</section><!-- /.section -->
-	<!-- End Contact -->
-</body>
+					</div>
+				</div>
+			<!-- Cups  -->
+				<div id="abs" class="section section-bg-2 section-cover pt-10 pb-10">
+					<div class="bg-overlay"></div>
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6 col-lg-offset-0 col-lg-3 col-md-offset-0 col-md-3 col-sm-offset-0 col-xs-6">
+								<div class="counter text-center white">
+									<div class="counter-icon">
+										<i class="pe-7s-coffee"></i>
+									</div>
+									<div class="counter-content">
+										<h5 class="counter-desc white">COFFEE CUPS</h5>
+										<h2 class="counter-digit white" data-from="0" data-to="503" data-speed="5000">503</h2>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-offset-0 col-lg-3 col-md-offset-0 col-md-3 col-sm-offset-0 col-xs-6">
+								<div class="counter text-center white">
+									<div class="counter-icon">
+										<i class="pe-7s-portfolio"></i>
+									</div>
+									<div class="counter-content">
+										<h5 class="counter-desc white">PROJECTS</h5>
+										<h2 class="counter-digit white" data-from="0" data-to="75" data-speed="5000">75</h2>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-offset-0 col-lg-3 col-md-offset-0 col-md-3 col-sm-offset-0 col-xs-6">
+								<div class="counter text-center white">
+									<div class="counter-icon">
+										<i class="pe-7s-mouse"></i>
+									</div>
+									<div class="counter-content">
+										<h5 class="counter-desc white">WORKING DAYS</h5>
+										<h2 class="counter-digit white" data-from="0" data-to="250" data-speed="5000">250</h2>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-offset-0 col-lg-3 col-md-offset-0 col-md-3 col-sm-offset-0 col-xs-6">
+								<div class="counter no-border text-center white">
+									<div class="counter-icon">
+										<i class="pe-7s-users"></i>
+									</div>
+									<div class="counter-content">
+										<h5 class="counter-desc white">CLIENTS</h5>
+										<h2 class="counter-digit white" data-from="0" data-to="68" data-speed="5000">68</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Portfolio  -->
+				<div id="portfolio" class="section section-bg-1 section-cover pt-9 pb-9">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 col-md-5"></div>
+							<div class="col-lg-6 col-md-7">
+								<h2 class="section-title fz-48 pt-6 pb-5">Meine <b>Faszination</b></h2>
+								<div class="features-blocks">
+									<div class="feature-item style-2 mb-3">
+										<div class="feature-icon">
+											<div class="feature-icon-inner">
+												<i class="pe-7s-anchor"></i>
+											</div>
+										</div>
+										<h4>Für immer verankert...</h4>
+										<div class="desc">
+											Ist das Saxophon... Heli now allows you to preview the change instantly without doing any server-side communication at all.
+										</div>
+										<a class="readmore" href="#"><span>Read More</span></a>
+									</div>
+									<div class="feature-item style-2 mb-3">
+										<div class="feature-icon">
+											<div class="feature-icon-inner">
+												<i class="pe-7s-notebook"></i>
+											</div>
+										</div>
+										<h4>UPDATED HOMEPAGES</h4>
+										<div class="desc">
+											There are at least 30 homepages counted at this time. And we constantly create new ones. A great offer: Tell us your desired niche theme, you’ll have it!
+										</div>
+										<a class="readmore" href="#"><span>Read More</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Subscribe  -->
+				<div class="section bg-gray pt-8 pb-8">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 col-lg-4 col-md-4">
+								<h2 class="section-title fz-24 mt-1 mb-2 text-center-xs"><b>SUBSCRIBE</b>NOW</h2>
+							</div>
+							<div class="col-sm-12 col-lg-8 col-md-8">
+								<form class="newsletter-form text-center-xs">
+									<input type="email" name="EMAIL" placeholder="Deine E-Mail Adresse" class="text-center-xs mb-1" />
+									<input type="submit" value="subscribe" />
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- End....  -->
+
+{% endblock %}
+
+{% block query %}
+{{ block.super }}
 {% endblock %}

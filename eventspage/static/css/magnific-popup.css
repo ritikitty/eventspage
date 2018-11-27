@@ -1,30 +1,4 @@
 /* Magnific Popup CSS */
-.mfp-fade.mfp-bg {
-  opacity: 0;
-  -webkit-transition: all 0.5s ease-out; 
-  -moz-transition: all 0.5s ease-out; 
-  transition: all 0.5s ease-out;
-}
-.mfp-fade.mfp-bg.mfp-ready {
-  opacity: 0.8;
-}
-.mfp-fade.mfp-bg.mfp-removing {
-  opacity: 0;
-}
-
-.mfp-fade.mfp-wrap .mfp-content {
-  opacity: 0;
-  -webkit-transition: all 0.5s ease-out; 
-  -moz-transition: all 0.5s ease-out; 
-  transition: all 0.5s ease-out;
-}
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-  opacity: 1;
-}
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-  opacity: 0;
-}
-
 .mfp-bg {
   top: 0;
   left: 0;
@@ -186,7 +160,7 @@ button::-moz-focus-inner {
   right: 0;
   color: #CCC;
   font-size: 12px;
-  line-height: 29px;
+  line-height: 18px;
   white-space: nowrap; }
 
 .mfp-arrow {
@@ -217,27 +191,30 @@ button::-moz-focus-inner {
     margin-left: 35px;
     border: medium inset transparent; }
   .mfp-arrow:after {
-    border-top-width: 10px;
-    border-bottom-width: 10px;
+    border-top-width: 13px;
+    border-bottom-width: 13px;
     top: 8px; }
   .mfp-arrow:before {
-    border-top-width: 15px;
-    border-bottom-width: 15px;
+    border-top-width: 21px;
+    border-bottom-width: 21px;
     opacity: 0.7; }
 
 .mfp-arrow-left {
   left: 0; }
   .mfp-arrow-left:after {
-    border-right: 12px solid #FFF;
+    border-right: 17px solid #FFF;
     margin-left: 31px; }
   .mfp-arrow-left:before {
-    margin-left: 25px; }
+    margin-left: 25px;
+    border-right: 27px solid #3F3F3F; }
 
 .mfp-arrow-right {
   right: 0; }
   .mfp-arrow-right:after {
-    border-left: 12px solid #FFF;
+    border-left: 17px solid #FFF;
     margin-left: 39px; }
+  .mfp-arrow-right:before {
+    border-left: 27px solid #3F3F3F; }
 
 .mfp-iframe-holder {
   padding-top: 40px;
@@ -259,7 +236,6 @@ button::-moz-focus-inner {
     display: block;
     top: 0;
     left: 0;
-    border: 0;
     width: 100%;
     height: 100%;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
@@ -310,11 +286,10 @@ img.mfp-img {
 
 .mfp-title {
   text-align: left;
-  line-height: 29px;
+  line-height: 18px;
   color: #F3F3F3;
   word-wrap: break-word;
-  padding-right: 36px;
-  font-size: 14px; }
+  padding-right: 36px; }
 
 .mfp-image-holder .mfp-content {
   max-width: 100%; }
