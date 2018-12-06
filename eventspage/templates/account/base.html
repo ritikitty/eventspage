@@ -1,1 +1,60 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+
+{% block head %}
+{{ block.super }}
+{% endblock %}
+
+{% block navbar_desktop %}
+      <header class="header header-1 header-desktop">
+				<div class="container">
+					<div class="row">
+						<div class="col-10 col-md-10 col-lg-10 col-xl-10 pl-0">
+							<div class="row">
+								<nav class="main-navigation fullwidth d-none d-lg-block">
+									<div class="primary-menu">
+										<ul class="main-menu">
+											<li class="menu-item-has-children mega-menu">
+												<a href="{% url 'home' %}">Home</a>
+												
+											</li>
+											<li class="menu-item-has-children">
+												<a href="{% url 'events' %}">Events</a>
+											
+											</li>
+
+											<li class="menu-item-has-children">
+												<a href="#news">News</a>
+											</li>
+
+											<li class="menu-item-has-children mega-menu">
+												<a href="{% url 'boards' %}">Forum</a>
+												
+											</li>
+											
+                        {% if user.is_authenticated %}
+                        <li><a>{{ user.username }}</a></li>
+                        <li><a href="{% url 'account_logout' %}"">Logout</a></li>
+                        {% else %}
+                        <li><a href="{% url 'account_login' %}">Login</a></li>
+                        {% endif %}
+
+										</ul>
+									</div>
+								</nav>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-2 header-column-icon-container">
+							<div class="header-icon header-icon-search d-none d-lg-block">
+								<i class="pe-7s-search"></i>
+							</div>
+							<div class="header-icon header-icon-canvas menu-button d-none d-lg-block">
+								<span></span>
+							</div>
+							<div id="page-open-mobile-menu" class="page-open-mobile-menu dark d-lg-none">
+								<div><i></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+{% endblock %}

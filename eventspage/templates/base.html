@@ -3,6 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        
 		<link rel="shortcut icon" href=" {% static 'images/favicon.ico' %}"/>
         <meta name="author" content="Orell Hürzeler" />
 	    <meta name="description" content="Tech Base">
@@ -143,6 +144,7 @@
 			</header>
             {% endblock %}
 
+            {% block navbar_mobile %}
             <!-- Header mobile -->
 			<div id="page-mobile-main-menu" class="page-mobile-main-menu">
 				<div class="page-mobile-menu-header">
@@ -153,7 +155,7 @@
 				<ul class="mobile-menu">
 					<li>
 						<a href="javascript:void(0)">
-							<span class="menu-item-title">Home</span>
+							<span class="menu-item-title" >Home</span>
 							<span class="toggle-sub-menu"> </span>
 						</a>
 						
@@ -193,7 +195,8 @@
 					</li>
 				</ul>
 			</div>
-
+            {% endblock %}
+            
             <!-- custom block -->
             {% block content %}
             {% endblock %}
