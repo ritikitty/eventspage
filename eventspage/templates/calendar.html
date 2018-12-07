@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+
+{{ block.super }}
+<meta charset='utf-8' />
+<link href="{% static 'calendar/fullcalendar.min.css' %}" rel='stylesheet' />
+<link href="{% static 'calendar/fullcalendar.print.min.css' %}" rel='stylesheet' media='print' />
+<script src="{% static 'calendar/lib/moment.min.js' %}"></script>
+<script src="{% static 'calendar/lib/jquery.min.js' %}"></script>
+<script src="{% static 'calendar/fullcalendar.min.js' %}"></script>
+<script>
+
+  $(document).ready(function() {
+
+    $('#calendar').fullCalendar({
+      defaultDate: '2018-03-12',
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2018-03-01'
+        },
+        {
+          title: 'Long Event',
+          start: '2018-03-07',
+          end: '2018-03-10'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2018-03-09T16:00:00'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2018-03-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '2018-03-11',
+          end: '2018-03-13'
+        },
+        {
+          title: 'Meeting',
+          start: '2018-03-12T10:30:00',
+          end: '2018-03-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2018-03-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2018-03-12T14:30:00'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2018-03-12T17:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2018-03-12T20:00:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2018-03-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '2018-03-28'
+        }
+      ]
+    });
+
+  });
+
+</script>
+<style>
+
+  body {
+    margin: 40px 10px;
+    padding: 0;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+  }
+
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+</style>
+
+{% endblock %}
+
+{% block navbar_desktop %}
+      <header class="header header-1 header-desktop">
+				<div class="container">
+					<div class="row">
+						<div class="col-10 col-md-10 col-lg-10 col-xl-10 pl-0">
+							<div class="row">
+								<nav class="main-navigation fullwidth d-none d-lg-block">
+									<div class="primary-menu">
+										<ul class="main-menu">
+											<li class="menu-item-has-children mega-menu">
+												<a href="{% url 'home' %}">Home</a>
+												
+											</li>
+											<li class="menu-item-has-children">
+												<a href="{% url 'events' %}">Events</a>
+											
+											</li>
+
+											<li class="menu-item-has-children">
+												<a href="#news">News</a>
+											</li>
+
+											<li class="menu-item-has-children mega-menu">
+												<a href="{% url 'boards' %}">Forum</a>
+												
+											</li>
+											
+                        {% if user.is_authenticated %}
+                        <li><a>{{ user.username }}</a></li>
+                        <li><a href="{% url 'account_logout' %}"">Logout</a></li>
+                        {% else %}
+                        <li><a href="{% url 'account_login' %}">Login</a></li>
+                        {% endif %}
+
+										</ul>
+									</div>
+								</nav>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-2 header-column-icon-container">
+							<div class="header-icon header-icon-search d-none d-lg-block">
+								<i class="pe-7s-search"></i>
+							</div>
+							<div class="header-icon header-icon-canvas menu-button d-none d-lg-block">
+								<span></span>
+							</div>
+							<div id="page-open-mobile-menu" class="page-open-mobile-menu dark d-lg-none">
+								<div><i></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+{% endblock %}
+
+{% block navbar_mobile %}
+{{ block.super }}
+{% endblock %}
+
+
+
+{% block content %}
+  <div id='calendar'></div>
+{% endblock %}
+
+
+

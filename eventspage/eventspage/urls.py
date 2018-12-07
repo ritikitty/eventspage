@@ -31,8 +31,11 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
 
     # events urls
+    url(r'^events/calendar/', pages.calendar, name='calendar'),
+    url(r'^events/map/', pages.map, name='map'),
     url(r'^events/(?P<pk>\d+)/$', pages.singleevent, name='singleevent'),
     url(r'^events/', pages.events, name='events'),
+    
 
     url(r'^admin/', admin.site.urls),
 ]
